@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: './'
+  publicPath: 'https://jiang-n.github.io/forever-note-website/'
 }
