@@ -1,32 +1,64 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <sidebar/>
     <router-view/>
   </div>
 </template>
 
+<script>
+import sidebar from './components/Sidebar'
+
+export default {
+  name: 'App',
+  components: {
+    sidebar
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+@import "//at.alicdn.com/t/font_2496508_gwpxffp1uc.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background-color: #eee;
 }
 
-#nav {
-  padding: 30px;
+a {
+  text-decoration: none;
+  color: #444;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+ul, li {
+  list-style: none;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.btn {
+  color: #666;
+  font-size: 12px;
+  padding: 2px 4px;
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 #ccc;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#app {
+  display: flex;
+  align-items: stretch;
 }
 </style>
